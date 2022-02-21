@@ -1,0 +1,342 @@
+{
+    "Spoofing Profile": {
+        "Disable Spoofing Profile": "",
+        "Add Profile": "",
+        "Spoofing Profile": "",
+        "Recycle Bin": ""
+    },
+    "Vehicle": {
+        "Vehicle Weapons": "",
+        "UFO": "",
+        "Handling Editor": "",
+        "Vehicle Doors": "",
+        "Vehicle Instant Lock-On": "",
+        "Vehicle": "",
+        "Airstrike Aircraft": "",
+        "Engine Always On": ""
+    },
+    "Ped Models": {
+        "Clown": "",
+        "Ballas Ganster": "",
+        "Marine": "",
+        "Altruist": "",
+        "Female Police Officer": "",
+        "SWAT": "",
+        "Jesus": "",
+        "Juggernaut": "",
+        "Male Police Officer": "",
+        "Prisoner": "",
+        "Hooker": "",
+        "Mime": "",
+        "Zombie": "",
+        "Astronaut": ""
+    },
+    "Settings - Controls": {
+        "Airstrike Aircraft": "",
+        "Vehicle Weapons": ""
+    },
+    "Vehicle - Teleport": {
+        "TP to Prision": "",
+        "TP to Waypoint": "",
+        "TP to Me": "",
+        "TP to Fort Zancudo": "",
+        "TP to Ocean": ""
+    },
+    "Spoofing Profile - Add Profile": {
+        "SCID": "",
+        "Name": "",
+        "Save Spoofing Profile": ""
+    },
+    "Friendly Options": {
+        "Kill Killers": ""
+    },
+    "Weapon - Vehicle Gun": {
+        "Set Vehicle": "",
+        "Set Into Vehicle": "",
+        "Custom Vehicle": ""
+    },
+    "Self - Proofs": {
+        "Fire": "",
+        "Explosion": "",
+        "Steam": "",
+        "Melee": "",
+        "Bullet": "",
+        "Drown": "",
+        "Collision": ""
+    },
+    "Vehicle Effects": {
+        "Alien Impact": "",
+        "Disable": "",
+        "Clown Appears": "",
+        "Vehicle Effects": "",
+        "Electic Fire": ""
+    },
+    "Bodyguard Menu": {
+        "Delete Bodyguards": "",
+        "Invincible Bodyguard": "",
+        "Spawn Bodyguard (7 Max)": "",
+        "Set Model": "",
+        "Ignore Players": "",
+        "Set Weapon": "",
+        "Backup Helicopter": "",
+        "Group Formation": "",
+        "Bodyguard Menu": "",
+        "Clone Player (Bodyguard)": ""
+    },
+    "Vehicle - Acrobatics": {
+        "Kick Flip": "",
+        "Double Kick Flip": "",
+        "Heel Flip": "",
+        "Ollie": ""
+    },
+    "Self": {
+        "Refill Armour": "",
+        "Trails": "",
+        "Self": "",
+        "Mod Max Health": "",
+        "Combustion Man": "",
+        "Undead Offradar": "",
+        "Instant Bullshark": "",
+        "Set Max Health": "",
+        "Force": "",
+        "Carpet Ride": "",
+        "Player Proofs": "",
+        "Refill Health in Cover": "",
+        "Refill Health": ""
+    },
+    "Bodyguard Menu - Backup Helicopter": {
+        "Spawn Backup Helicopter": "",
+        "Invincible Backup": ""
+    },
+    "Trolling - Custom Explosion": {
+        "Explosion Type": "",
+        "Owned Explosions": "",
+        "Explode": "",
+        "Explosion Loop": "",
+        "Loop Speed": "",
+        "Invisible": "",
+        "Audible": ""
+    },
+    "Player": {
+        "Trolling & Griefing": "",
+        "Create Spoofing Profile": "",
+        "Friendly Options": ""
+    },
+    "Settings - Handling Editor": {
+        "Buttons Colour": "",
+        "Focused Text Colour": "",
+        "Highlight Colour": ""
+    },
+    "World": {
+        "Kill Enemies": "",
+        "Jumping Cars": "",
+        "World": "",
+        "Auto Kill Enemies": "",
+        "Angry Planes": "",
+        "Draw Health Bar": ""
+    },
+    "Trolling": {
+        "Hostile Peds": "",
+        "Custom Explosion": "",
+        "Rain Rockets (owned)": "",
+        "Cage": "",
+        "Water Loop": "",
+        "Flame Loop": "",
+        "Hostile Traffic": "",
+        "Rain Rockets": "",
+        "Kill as Orbital Cannon": "",
+        "Piggy Back": "",
+        "Rape": "",
+        "Enemy Vehicles": "",
+        "Damage": "",
+        "Attacker Options": "",
+        "Ram Player": "",
+        "Shake Camera": "",
+        "Trolly Vehicles": "",
+        "Creeper Clown": "",
+        "Kamikaze": ""
+    },
+    "Trolling - Cage": {
+        "Tall": "",
+        "Fence": "",
+        "Stunt Tube": "",
+        "Automatic": "",
+        "Small": ""
+    },
+    "Hit Effect": {
+        "FW Trailburst": "",
+        "Clown Flowers": "",
+        "Set Effect": "",
+        "FW Starburst": "",
+        "FW Ground Burst": "",
+        "FW Fountain": "",
+        "Clown Explosion": "",
+        "Clown Appears": "",
+        "Hit Effect": "",
+        "Colour": "",
+        "Alien Disintegration": ""
+    },
+    "Trolling - Attacker Options": {
+        "Clone Player (Enemy)": "",
+        "Send Police Car": "",
+        "Set Model": "",
+        "Delete Attackers": "",
+        "Spawn Attacker": "",
+        "Set Weapon": "",
+        "Stationary": "",
+        "Attacker Model List": "",
+        "Invincible Attackers": "",
+        "Enemy Chop": ""
+    },
+    "Weapon": {
+        "Magnet Gun": "",
+        "Airstrike Gun": "",
+        "Weapon": "",
+        "Set Weapon Bullet": "",
+        "Vehicle Gun": "",
+        "Superpunch": "",
+        "Vehicle Paint Gun": "",
+        "Bullet Changer": "",
+        "Magnet Entities": "",
+        "Bullet Speed Mult": "",
+        "Teleport Gun": "",
+        "Valkyire Rocket": "",
+        "Launch Guided Missile": ""
+    },
+    "Player - Vehicle": {
+        "God Mode": "",
+        "Apply Radom Paint": "",
+        "Burst Tires": "",
+        "Repair": "",
+        "Vehicle": "",
+        "Acrobatics": "",
+        "Boost Forward": "",
+        "Kick": "",
+        "Invisible": "",
+        "Kill Engine": "",
+        "Upgrade": "",
+        "Clean": "",
+        "Freeze": "",
+        "Child Lock": "",
+        "Teleport": "",
+        "Set License Plate": "",
+        "Catapult": ""
+    },
+    "Forcefield": {
+        "Disable": "",
+        "Forcefield": "",
+        "Destroy": "",
+        "Push Out": ""
+    },
+    "Vehicle - Autopilot": {
+        "Speed": "",
+        "Autopilot": "",
+        "Driving Style": ""
+    },
+    "Trolling - Damage": {
+        "Up-n-Atomizer": "",
+        "Molotov": "",
+        "Firework": "",
+        "EMP Launcher": "",
+        "Heavy Sniper": ""
+    },
+    "Bodyguard Menu - Group Formation": {
+        "Circle Around Leader": "",
+        "Freedom to Move": "",
+        "Arrow Formation": "",
+        "Line": ""
+    },
+    "Trolling - Trolly Vehicles": {
+        "Send Go-Kart(s)": "",
+        "Invincible": "",
+        "Delete Bandito(s)": "",
+        "Send Bandito(s)": "",
+        "Send Explosive Bandito": "",
+        "Delete Go-Karts": ""
+    },
+    "Vehicle - Vehicle Doors": {
+        "Driver Door": "",
+        "Rear Right": "",
+        "Rear Left": "",
+        "Trunk": "",
+        "All": "",
+        "Hood": "",
+        "Passenger Door": ""
+    },
+    "WiriScript": {
+        "Show Credits": "",
+        "Join WiriScript FanClub": ""
+    },
+    "World - Draw Health Bar": {
+        "Peds": "",
+        "Aimed Ped": "",
+        "Disable": "",
+        "Players & Peds": "",
+        "Players": ""
+    },
+    "Trolling - Enemy Vehicles": {
+        "Minitank": "",
+        "Invincible": "",
+        "Delete Lazers": "",
+        "Delete Minitank(s)": "",
+        "Send Minitank(s)": "",
+        "Buzzard": "",
+        "Minitank Weapon": "",
+        "Send Buzzard(s)": "",
+        "Send Lazer(s)": "",
+        "Visible": "",
+        "Gunners Weapon": ""
+    },
+    "Self - Trails": {
+        "Colour": "",
+        "Trails": ""
+    },
+    "Autopilot - Driving Style": {
+        "Ignore Roads": "",
+        "Presets": "",
+        "Default": "",
+        "Ignore All Pathing": "",
+        "Custom": "",
+        "Avoid Empty Vehicles": "",
+        "Stop Before Vehicles": "",
+        "Take Shortest Path": "",
+        "Rushed": "",
+        "Reverse Only": "",
+        "Avoid Objects": "",
+        "Avoid Traffic": "",
+        "Avoid Vehicles": "",
+        "Avoid Peds": "",
+        "Normal": "",
+        "Set Custom Driving Style": "",
+        "Stop At Traffic Lights": "",
+        "Ignore Lights": "",
+        "Stop Before Peds": ""
+    },
+    "Weapon - Magnet Gun": {
+        "Disable": "",
+        "Smooth": "",
+        "Caos Mode": ""
+    },
+    "Shooting Effect": {
+        "Disable": "",
+        "Shooting Effect": "",
+        "Clown Flowers": "",
+        "Clown Muz": ""
+    },
+    "Settings": {
+        "Health Text Position": "",
+        "Handling Editor": "",
+        "Disable Vehicle Gun Preview": "",
+        "Stand Notifications": "",
+        "Save Settings": "",
+        "Display Health Text": "",
+        "Disable Lock-On Sprites": "",
+        "Controls": "",
+        "Busted Features": ""
+    },
+    "Vehicle - Vehicle Weapons": {
+        "Vehicle Weapons": "",
+        "Set Vehicle Weapon": "",
+        "Vehicle Lasers": ""
+    }
+}
