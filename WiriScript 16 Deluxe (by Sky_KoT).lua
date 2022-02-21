@@ -2478,11 +2478,12 @@ if SCRIPT_MANUAL_START then
 
 		if state == 0 then
 			SETUP_SINGLE_LINE(scaleform)
---[[	
+	
 ADD_TEXT_TO_SINGLE_LINE(scaleform, 'a', '$font5', "HUD_COLOUR_WHITE")
 ADD_TEXT_TO_SINGLE_LINE(scaleform, 'nowiry', '$font2', "HUD_COLOUR_BLUE")
 ADD_TEXT_TO_SINGLE_LINE(scaleform, 'production', '$font5', "HUD_COLOUR_WHITE")
---]]
+ADD_TEXT_TO_SINGLE_LINE(scaleform, 'Deluxe', '$font2', "HUD_COLOUR_BLUE")
+ADD_TEXT_TO_SINGLE_LINE(scaleform, 'edtion', '$font5', "HUD_COLOUR_WHITE")
 			GRAPHICS.BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, "SHOW_SINGLE_LINE")
 			GRAPHICS.SCALEFORM_MOVIE_METHOD_ADD_PARAM_TEXTURE_NAME_STRING("presents")
 			GRAPHICS.END_SCALEFORM_MOVIE_METHOD()
@@ -2505,10 +2506,10 @@ ADD_TEXT_TO_SINGLE_LINE(scaleform, 'production', '$font5', "HUD_COLOUR_WHITE")
 
 		if cTime() - stime >= 3000 and state == 2 then
 			SETUP_SINGLE_LINE(scaleform)
---[[
+
 ADD_TEXT_TO_SINGLE_LINE(scaleform, 'wiriscript', '$font2', 'HUD_COLOUR_TREVOR')
 ADD_TEXT_TO_SINGLE_LINE(scaleform, 'v'..version, '$font5', 'HUD_COLOUR_WHITE')
---]]	
+
 			
 			GRAPHICS.BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, "SHOW_SINGLE_LINE")
 			GRAPHICS.SCALEFORM_MOVIE_METHOD_ADD_PARAM_TEXTURE_NAME_STRING("presents")
@@ -4481,7 +4482,7 @@ end)
 		STREAMING.SET_MODEL_AS_NO_LONGER_NEEDED(veh_hash)
 		AUDIO.PLAY_POLICE_REPORT("SCRIPTED_SCANNER_REPORT_FRANLIN_0_KIDNAP", 0.0)
 	end)
-
+--[[
 -------------------------------------
 	-- CUSTOM KDJ BY AXHOV
 	-------------------------------------
@@ -4563,8 +4564,8 @@ end)
 		end
 		attacker.spawned = {}
 	end)
-	
-menu.action(attacker_options, 'Удалить полицейских', {}, '', function()
+--]]	
+menu.action(attacker_options, menuname('Sky_KoT', 'Delete'), {}, '', function()
 DELETE_ALL_VEHICLES_GIVEN_MODEL('police3')
 DELETE_ALL_PEDS_GIVEN_MODEL('s_m_y_cop_01')
 end)
@@ -4628,7 +4629,7 @@ local explode = menu.list(explo_settings, menuname('Trolling', 'Custom Explosion
 --KILL AS THE ORBITAL CANNON
 --Убить с орбиталочки
 ----------------------------------------
-	menu.action(explo_settings, "Убить с орбиталочки (быстро) ", {"orbital"}, "", function()
+	menu.action(explo_settings, menuname('Sky_KoT', 'Fast orbital'), {"orbital"}, "", function()
 		menu.trigger_commands("becomeorbitalcannon on") 
 		util.yield(200)
 		local pos = ENTITY.GET_ENTITY_COORDS(PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(pid))
@@ -9232,391 +9233,3 @@ while true do
 
 	end
 end
-
---[[
-
-Оружие https://wiki.rage.mp/index.php?title=Weapons
-
-Метки иконки Blip https://wiki.rage.mp/index.php?title=Blips
-
-Компоненты игрока https://wiki.rage.mp/index.php?title=Clothes
-https://wiki.rage.mp/index.php?title=Player::setComponentVariation
-
-SET_PED_COMPONENT_VARIATION(Ped ped, int componentId, int drawableId, int textureId, int paletteId)
-paletteId: 0 to 3.
-list of components
-0: Face 
-1: Mask 
-2: Hair 
-3: Torso 
-4: Leg 
-5: Parachute/bag 
-6: Shoes 
-7: Accessory 
-8: Undershirt 
-9: Kevlar 
-10: Badge 
-11: Torso 2
-
-Картинки уведомлений  https://wiki.rage.mp/index.php?title=Notification_Pictures
-
-Звуки AUDIO.PLAY_SOUND_FROM_ENTITY(-1, "clown_die_wrapper", PLAYER.PLAYER_PED_ID(), "BARRY_02_SOUNDSET", true, 20)  https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
-
-ROTATION_TO_DIRECTION(rotation)
- --Получить позицию, в которую игрок целится https://forum.cfx.re/t/get-position-where-player-is-aiming/1903886/2
---_SET_PED_HAIR_COLOR(Ped ped, int colorID, int highlightColorID);
---void _SET_PED_EYE_COLOR(Ped ped, int index);
---void _SET_PED_FACE_FEATURE(Ped ped, int index, float scale);
-
-Коды клавиш
-PAD.IS_CONTROL_PRESSED(2, 25) https://docs.fivem.net/docs/game-references/controls/#controls-- 
-
-Радио
-Examples:
-AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK", "END_CREDITS_KILL_MICHAEL", 1);
-AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK", "END_CREDITS_KILL_MICHAEL", 1);
-AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK", "END_CREDITS_KILL_TREVOR", 1);
-AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK", "END_CREDITS_SAVE_MICHAEL_TREVOR", 1);
-AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK", "OFF_ROAD_RADIO_ROCK_LIST", 1);
-AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_06_COUNTRY", "MAGDEMO2_RADIO_DINGHY", 1);
-AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_16_SILVERLAKE", "SEA_RACE_RADIO_PLAYLIST", 1);
-AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK", "OFF_ROAD_RADIO_ROCK_LIST", 1);
-
-menu.toggle(submenu, "Toggle", {"command"}, "", function(on_toggle)
-if on_toggle then
--- активация
-else
--- деактивация
-end
-end)
-
-Label
-WT с большой буквы
-WTU всё слово с большой буквы
---]]
-
---[[ Скрыть весь раздел--]]
-
---[[
-Snippets
-{
-  "melee": {
-    "dagger": "0x92A27487",
-    "bat": "0x958A4A8F",
-    "bottle": "0xF9E6AA4B",
-    "crowbar": "0x84BD7BFD",
-    "unarmed": "0xA2719263",
-    "flashlight": "0x8BB05FD7",
-    "golfclub": "0x440E4788",
-    "hammer": "0x4E875F73",
-    "hatchet": "0xF9DCBF2D",
-    "knuckle": "0xD8DF3C3C",
-    "knife": "0x99B507EA",
-    "machete": "0xDD5DF8D9",
-    "switchblade": "0xDFE37640",
-    "nightstick": "0x678B81B1",
-    "wrench": "0x19044EE0",
-    "battleaxe": "0xCD274149",
-    "poolcue": "0x94117305",
-    "stone_hatchet": "0x3813FC08"
-  },
-  "handguns": {
-    "pistol": "0x1B06D571",
-    "pistol_mk2": "0xBFE256D4",
-    "combatpistol": "0x5EF9FEC4",
-    "appistol": "0x22D8FE39",
-    "stungun": "0x3656C8C1",
-    "pistol50": "0x99AEEB3B",
-    "snspistol": "0xBFD21232",
-    "snspistol_mk2": "0x88374054",
-    "heavypistol": "0xD205520E",
-    "vintagepistol": "0x83839C4",
-    "flaregun": "0x47757124",
-    "marksmanpistol": "0xDC4DB296",
-    "revolver": "0xC1B3C3D1",
-    "revolver_mk2": "0xCB96392F",
-    "doubleaction": "0x97EA20B8",
-    "raypistol": "0xAF3696A1",
-    "ceramicpistol": "0x2B5EF5EC",
-    "navyrevolver": "0x917F6C8C"
-  },
-  "smg": {
-    "microsmg": "0x13532244",
-    "smg": "0x2BE6766B",
-    "smg_mk2": "0x78A97CD0",
-    "assaultsmg": "0xEFE7E2DF",
-    "combatpdw": "0xA3D4D34",
-    "machinepistol": "0xDB1AA450",
-    "minismg": "0xBD248B55",
-    "raycarbine": "0x476BF155"
-  },
-  "shotguns": {
-    "pumpshotgun": "0x1D073A89",
-    "pumpshotgun_mk2": "0x555AF99A",
-    "sawnoffshotgun": "0x7846A318",
-    "assaultshotgun": "0xE284C527",
-    "bullpupshotgun": "0x9D61E50F",
-    "musket": "0xA89CB99E",
-    "heavyshotgun": "0x3AABBBAA",
-    "dbshotgun": "0xEF951FBB",
-    "autoshotgun": "0x12E82D3D"
-  },
-  "assault_rifles": {
-    "assaultrifle": "0xBFEFFF6D",
-    "assaultrifle_mk2": "0x394F415C",
-    "carbinerifle": "0x83BF0278",
-    "carbinerifle_mk2": "0xFAD1F1C9",
-    "advancedrifle": "0xAF113F99",
-    "specialcarbine": "0xC0A3098D",
-    "specialcarbine_mk2": "0x969C3D67",
-    "bullpuprifle": "0x7F229F94",
-    "bullpuprifle_mk2": "0x84D6FAFD",
-    "compactrifle": "0x624FE830"
-  },
-  "machine_guns": {
-    "mg": "0x9D07F764",
-    "combatmg": "0x7FD62962",
-    "combatmg_mk2": "0xDBBD7280",
-    "gusenberg": "0x61012683"
-  },
-  "sniper_rifles": {
-    "sniperrifle": "0x5FC3C11",
-    "heavysniper": "0xC472FE2",
-    "heavysniper_mk2": "0xA914799",
-    "marksmanrifle": "0xC734385A",
-    "marksmanrifle_mk2": "0x6A6C02E0"
-  },
-  "heavy_weapons": {
-    "rpg": "0xB1CA77B1",
-    "grenadelauncher": "0xA284510B",
-    "grenadelauncher_smoke": "0x4DD2DC56",
-    "minigun": "0x42BF8A85",
-    "firework": "0x7F7497E5",
-    "railgun": "0x6D544C99",
-    "hominglauncher": "0x63AB0442",
-    "compactlauncher": "0x781FE4A",
-    "rayminigun": "0xB62D1F67"
-  },
-  "throwables": {
-    "grenade": "0x93E220BD",
-    "bzgas": "0xA0973D5E",
-    "smokegrenade": "0xFDBC8A50",
-    "flare": "0x497FACC3",
-    "molotov": "0x24B17070",
-    "stickybomb": "0x2C3731D9",
-    "proxmine": "0xAB564B93",
-    "snowball": "0x787F0BB",
-    "pipebomb": "0xBA45E8B8",
-    "ball": "0x23C9F95C"
-  },
-  "misc": {
-    "petrolcan": "0x34A67B97",
-    "fireextinguisher": "0x60EC506",
-    "parachute": "0xFBAB5776",
-    "hazardcan": "0xBA536372"
-  }
-}
-Vehicle weapon names
-{"weapons": 
-	"vehicle_weapons": {
-		"VEHICLE_WEAPON_ROTORS": 2971687502, 
-		"VEHICLE_WEAPON_TANK": 1945616459, 
-		"VEHICLE_WEAPON_SEARCHLIGHT": 3450622333,
-		"VEHICLE_WEAPON_RADAR": 3530961278,
-		"VEHICLE_WEAPON_PLAYER_BULLET": 1259576109,
-		"VEHICLE_WEAPON_PLAYER_LAZER": 4026335563,
-		"VEHICLE_WEAPON_ENEMY_LASER": 1566990507,
-		"VEHICLE_WEAPON_PLAYER_BUZZARD": 1186503822,
-		"VEHICLE_WEAPON_PLAYER_HUNTER": 2669318622,
-		"VEHICLE_WEAPON_PLANE_ROCKET": 3473446624,
-		"VEHICLE_WEAPON_SPACE_ROCKET": 4171469727,
-		"VEHICLE_WEAPON_TURRET_INSURGENT",
-		"VEHICLE_WEAPON_PLAYER_SAVAGE",
-		"VEHICLE_WEAPON_TURRET_TECHNICAL",
-		"VEHICLE_WEAPON_NOSE_TURRET_VALKYRIE",
-		"VEHICLE_WEAPON_TURRET_VALKYRIE",
-		"VEHICLE_WEAPON_CANNON_BLAZER",
-		"VEHICLE_WEAPON_TURRET_BOXVILLE",
-		"VEHICLE_WEAPON_RUINER_BULLET",
-		"VEHICLE_WEAPON_RUINER_ROCKET",
-		"VEHICLE_WEAPON_HUNTER_MG",
-		"VEHICLE_WEAPON_HUNTER_MISSILE",
-		"VEHICLE_WEAPON_HUNTER_CANNON",
-		"VEHICLE_WEAPON_HUNTER_BARRAGE",
-		"VEHICLE_WEAPON_TULA_NOSEMG",
-		"VEHICLE_WEAPON_TULA_MG",
-		"VEHICLE_WEAPON_TULA_DUALMG",
-		"VEHICLE_WEAPON_TULA_MINIGUN",
-		"VEHICLE_WEAPON_SEABREEZE_MG",
-		"VEHICLE_WEAPON_MICROLIGHT_MG",
-		"VEHICLE_WEAPON_DOGFIGHTER_MG",
-		"VEHICLE_WEAPON_DOGFIGHTER_MISSILE",
-		"VEHICLE_WEAPON_MOGUL_NOSE",
-		"VEHICLE_WEAPON_MOGUL_DUALNOSE",
-		"VEHICLE_WEAPON_MOGUL_TURRET",
-		"VEHICLE_WEAPON_MOGUL_DUALTURRET",
-		"VEHICLE_WEAPON_ROGUE_MG",
-		"VEHICLE_WEAPON_ROGUE_CANNON",
-		"VEHICLE_WEAPON_ROGUE_MISSILE",
-		"VEHICLE_WEAPON_BOMBUSHKA_DUALMG",
-		"VEHICLE_WEAPON_BOMBUSHKA_CANNON",
-		"VEHICLE_WEAPON_HAVOK_MINIGUN",
-		"VEHICLE_WEAPON_VIGILANTE_MG",
-		"VEHICLE_WEAPON_VIGILANTE_MISSILE",
-		"VEHICLE_WEAPON_TURRET_LIMO",
-		"VEHICLE_WEAPON_DUNE_MG",
-		"VEHICLE_WEAPON_DUNE_GRENADELAUNCHER",
-		"VEHICLE_WEAPON_DUNE_MINIGUN",
-		"VEHICLE_WEAPON_TAMPA_MISSILE",
-		"VEHICLE_WEAPON_TAMPA_MORTAR",
-		"VEHICLE_WEAPON_TAMPA_FIXEDMINIGUN",
-		"VEHICLE_WEAPON_TAMPA_DUALMINIGUN",
-		"VEHICLE_WEAPON_HALFTRACK_DUALMG",
-		"VEHICLE_WEAPON_HALFTRACK_QUADMG",
-		"VEHICLE_WEAPON_APC_CANNON": 328167896,
-		"VEHICLE_WEAPON_APC_MISSILE": 1151689097,
-		"VEHICLE_WEAPON_APC_MG": 190244068,
-		"VEHICLE_WEAPON_ARDENT_MG",
-		"VEHICLE_WEAPON_TECHNICAL_MINIGUN",
-		"VEHICLE_WEAPON_INSURGENT_MINIGUN",
-		"VEHICLE_WEAPON_TRAILER_QUADMG",
-		"VEHICLE_WEAPON_TRAILER_MISSILE",
-		"VEHICLE_WEAPON_TRAILER_DUALAA",
-		"VEHICLE_WEAPON_NIGHTSHARK_MG",
-		"VEHICLE_WEAPON_OPPRESSOR_MG",
-		"VEHICLE_WEAPON_OPPRESSOR_MISSILE",
-		"VEHICLE_WEAPON_MOBILEOPS_CANNON",
-		"VEHICLE_WEAPON_AKULA_TURRET_SINGLE",
-		"VEHICLE_WEAPON_AKULA_MISSILE",
-		"VEHICLE_WEAPON_AKULA_TURRET_DUAL",
-		"VEHICLE_WEAPON_AKULA_MINIGUN",
-		"VEHICLE_WEAPON_AKULA_BARRAGE",
-		"VEHICLE_WEAPON_AVENGER_CANNON",
-		"VEHICLE_WEAPON_BARRAGE_TOP_MG",
-		"VEHICLE_WEAPON_BARRAGE_TOP_MINIGUN",
-		"VEHICLE_WEAPON_BARRAGE_REAR_MG",
-		"VEHICLE_WEAPON_BARRAGE_REAR_MINIGUN",
-		"VEHICLE_WEAPON_BARRAGE_REAR_GL",
-		"VEHICLE_WEAPON_CHERNO_MISSILE",
-		"VEHICLE_WEAPON_COMET_MG",
-		"VEHICLE_WEAPON_DELUXO_MG",
-		"VEHICLE_WEAPON_DELUXO_MISSILE",
-		"VEHICLE_WEAPON_KHANJALI_CANNON",
-		"VEHICLE_WEAPON_KHANJALI_CANNON_HEAVY",
-		"VEHICLE_WEAPON_KHANJALI_MG",
-		"VEHICLE_WEAPON_KHANJALI_GL",
-		"VEHICLE_WEAPON_REVOLTER_MG",
-		"VEHICLE_WEAPON_WATER_CANNON": 1741783703,
-		"VEHICLE_WEAPON_SAVESTRA_MG",
-		"VEHICLE_WEAPON_SUBCAR_MG",
-		"VEHICLE_WEAPON_SUBCAR_MISSILE",
-		"VEHICLE_WEAPON_SUBCAR_TORPEDO",
-		"VEHICLE_WEAPON_THRUSTER_MG",
-		"VEHICLE_WEAPON_THRUSTER_MISSILE",
-		"VEHICLE_WEAPON_VISERIS_MG",
-		"VEHICLE_WEAPON_VOLATOL_DUALMG"
-	}, 
-	"explosives": {
-		"GRENADE": 3058715602, 
-		"GRENADELAUNCHER": 286056380, 
-		"STICKYBOMB": 3357909247, 
-		"MOLOTOV": 4233768403, 
-		"ROCKET": 798856618, 
-		"TANKSHELL": 1693512364, 
-		"HI_OCTANE": 1436779599, 
-		"CAR": 1768518260, 
-		"PLANE": 428159217, 
-		"PETROL_PUMP": 1114654932, 
-		"BIKE": 3883417820, 
-		"DIR_STEAM": 2666433428, 
-		"DIR_FLAME": 527211813, 
-		"DIR_WATER_HYDRANT": 352593635, 
-		"DIR_GAS_CANISTER": 845770333, 
-		"BOAT": 1762719600, 
-		"SHIP_DESTROY": 1907543711, 
-		"TRUCK": 1115750597, 
-		"BULLET": 2598821281, 
-		"SMOKEGRENADELAUNCHER": 3280748971, 
-		"SMOKEGRENADE": 2462366525, 
-		"BZGAS": 3779253713, 
-		"FLARE": 2964119085, 
-		"GAS_CANISTER": 2557052034, 
-		"EXTINGUISHER": 3104722777, 
-		"PROGRAMMABLEAR": 1195540791, 
-		"TRAIN": 1015970717, 
-		"BARREL": 335057065, 
-		"PROPANE": 2441087679, 
-		"BLIMP": 4143991942, 
-		"DIR_FLAME_EXPLODE": 3476653675, 
-		"TANKER": 3564062519, 
-		"PLANE_ROCKET": 881270991, 
-		"VEHICLE_BULLET": 2211086889, 
-		"GAS_TANK": 2820610173, 
-		"FIREWORK": 2621769546
-	}
-}
-Event:SENT_PLAYER_CAYO =        -621279188
-Event:BOUNTY =          1294995624
-Event:SENT_PLAYER_CUTSCENE =            1068259786
-Event:TELEPORT_PLAYER =         603406648
-Event:SOUND_SPAM_PLAYER =               1132878564
-Event:CEO_KICK_PLAYER =         248967238
-Event:CEO_BAN_PLAYER =          -764524031
-Event:FORCE_MISSION_PLAYER =            2020588206
-Event:FAKE_DEPOSIT_PLAYER =             677240627
-Event:PERSONAL_VEH_DESTORY_PLAYER =             802133775
-Event:TRANS_ERROR_PLAYER =              -1704141512
-Event:BANNER =          1572255940
-Event:REMOVE_WANTED =           -91354030
-Event:OTR =     -391633760
-Event:VEHICLE_KICK =            578856274
-
-menuname('Handling', 'Save Handling')
-menuname('Handling', 'Load Handling')
-menuname('Handling', 'Cursor mode')
-menuname('Handling', 'Vehicle Handling')
-menuname('Handling', 'Current Vehicle')
-menuname('Handling', '')
-menuname('Handling', '')
-menuname('Handling', '')
-menuname('Handling', '')
-menuname('Handling', '')
-
-menuname('Sky_KoT', 'Send'),
-menuname('Sky_KoT', 'Delete'),
-menuname('Sky_KoT', 'GM'),
-menuname('Sky_KoT', 'spectate'),
-menuname('Sky_KoT', 'ratjack'),
-menuname('Sky_KoT', 'Racoon dune5'),
-menuname('Sky_KoT', 'Racoon_Phantom'),
-menuname('Sky_KoT', 'Halloween_Sanctus'),
-menuname('Sky_KoT', 'Halloween_Deathbike2'),
-menuname('Sky_KoT', 'Halloween_Deathbike3'),
-menuname('Sky_KoT', 'Deluxo'),
-menuname('Sky_KoT', 'JesusLance'),
-menuname('Help', ''),
-menuname('Help', ''),
-menuname('Help', ''),
-menuname('Help', 'Choose the weapon and shoot em no matter where you are.'),
-menuname('Notification', ''),
-menuname('Notification', ''),
-menuname('Notification', ''),
-menuname('Notification', ''),
-menuname('Notification', ''),
-menuname('Notification', ''),
-util.show_corner_help
-notification.help
-notification.normal
-
-
-
-
-
-
-
-
-
-
-dzuikaku2004
-dolbansolo2004
---]]
