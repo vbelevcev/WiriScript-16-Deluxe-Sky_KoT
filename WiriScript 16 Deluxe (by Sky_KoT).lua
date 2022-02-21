@@ -9,7 +9,7 @@ Discord Sky_KoT#8064
 util.require_natives(1640181023)
 --require("natives-1640181023")
 require "wiriscript.functions"
-require 'lua_imGUI V3'
+--require 'lua_imGUI V3'
 require 'lua_imGUI V2-1'
 json = require 'pretty.json'
 ufo = require "wiriscript.ufo"
@@ -8144,7 +8144,7 @@ menu.action(bodyguards_options, menuname('Bodyguard Menu', 'Spawn Bodyguard (7 M
 	
 	REQUEST_MODELS(m_ped_hash)
 	local ped = entities.create_ped(29, m_ped_hash, pos, CAM.GET_GAMEPLAY_CAM_ROT(0).z)
-	insert_once(ped.spawned, model)
+	insert_once(bodyguard.spawned, model)
 	NETWORK.SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(NETWORK.PED_TO_NET(ped), PLAYER.PLAYER_ID(), true)
 	NETWORK.SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(NETWORK.PED_TO_NET(ped), true)
 	WEAPON.GIVE_WEAPON_TO_PED(ped, joaat(weapon), -1, false, true)
