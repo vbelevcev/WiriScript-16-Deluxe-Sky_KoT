@@ -13,6 +13,7 @@
 - Added new cursor,
 - Added Godfinger, (wiri programming chat)
 - Added enemies Dr Dre attack (Lance skript jesus base),
+- Added RatJack player))
 - Added hostile cars
 	> Racoon_Bmx
 	> Racoon dune5
@@ -23,8 +24,8 @@
 	> Deluxo
 	> Limo2
 - Added script events (test, old events, but they work, most of them are in the menu itself)
-- DreAttack
 - Added more Damage
+- Added Angry planes player
 - More minor changes that I don't remember anymore
 
 ## Installation
