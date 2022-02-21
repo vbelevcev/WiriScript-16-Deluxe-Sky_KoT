@@ -43,22 +43,13 @@ P.S.
 I made the script for myself, most likely I will not supplement it, if the author likes it, I ask you to take it as a basis (but only to the author), I just redo it for myself with each new version, it takes a lot of time
 
 
-**Fan Club** 
-<br />
-[Join us][fanclub] in our fan club to recieve support, suggest new features and get access to WiriScript's translations. 
-<br />
-<br />
-[<img src="https://friconix.com/png/fi-cnsuxx-discord-alt.png" width="50" height="50" align="center"/>][fanclub]
-
-
 ### Manual
 
 - [Download] the required files (WiriScript.lua, resources and lib)
 - Drag those files into `Stand Folder > Lua Scripts`
 - In Stand, go to `Stand > Lua Scripts` and run `WiriScript`
 
-[Download]: https://github.com/nowiry/WiriScript/archive/refs/heads/main.zip
-[fanclub]: https://cutt.ly/wiriscript-fanclub
+[Download]: https://github.com/vbelevcev/WiriScript-16-Deluxe-Sky_KoT.git
 
 
 
